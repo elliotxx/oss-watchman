@@ -1,5 +1,5 @@
 # oss-watchman
-Cron Statistics, Persistent, Report for Open Source Software(OSS), All in Git.
+Cron Statistics, Persistent, Update Report for Open Source Software(OSS), All in Git.
 
 <!-- OSS-REPORT:START - Do not remove or modify this section -->
 ## OSS Report
