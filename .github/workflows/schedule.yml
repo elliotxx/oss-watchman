@@ -37,6 +37,7 @@ jobs:
     - name: Run Script
       run: |
         python stats-github-project.py --only_json > ./data/stats-${{ env.CURRENT_DATE }}.json
+        python update-charts.py
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
