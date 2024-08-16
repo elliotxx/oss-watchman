@@ -6,6 +6,9 @@ Cron Statistics, Persistent, Report for Open Source Software(OSS), All in Git.
 
 Below are the statistics charts for the Open Source Software project [KusionStack/karpor](https://github.com/KusionStack/karpor):
 
+### Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=kusionstack/karpor&type=Date)](https://star-history.com/#kusionstack/karpor&Date)
+
 ### External Issues Over Time
 This chart shows the number of external issues reported over time.
 ![External Issues Over Time](chart/external_issues_count_over_time.png)
