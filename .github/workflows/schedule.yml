@@ -46,9 +46,9 @@ jobs:
         git config --global user.name 'oss-watchman[bot]'
         git config --global user.email 'oss-watchman[bot]@users.noreply.github.com'
         # 添加文件到暂存区
-        git add ./data/
+        git add .
         # 提交并推送到 origin 的当前分支
-        git commit -m "Add stats result for ${{ env.CURRENT_DATE }}"
+        git commit -m "Add stats result and update chart for ${{ env.CURRENT_DATE }}"
         git push origin HEAD:${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
