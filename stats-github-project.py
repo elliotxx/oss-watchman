@@ -139,19 +139,12 @@ def main(args):
     if not args.only_json:
         print()
 
-    # 假设你已经有了一个成员列表，这里只是示例
-    # members = [contributor["login"] for contributor in contributors]
-    members = [
-        "elliotxx",
-        "panshuai-ps",
-        "ffforest",
-        "ruquanzhao",
-        "SparkYuan",
-        "healthjyk",
-        "dependabot[bot]",
-        "wolfcode111",
-        "weieigao",
-    ]
+    # 从环境变量中读取成员列表
+    members_str = os.getenv(
+        "MEMBERS_LIST", default="[]"
+    )  # 默认为空列表以防环境变量未设置
+    members = json.loads(members_str)
+
     if not args.only_json:
         print(f"内部成员列表({len(members)} 个)：")
         for member in members:
