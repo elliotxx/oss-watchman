@@ -3,6 +3,7 @@ import json
 import argparse
 import requests
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()  # 默认从当前目录下的 .env 文件加载
 
@@ -274,6 +275,11 @@ if __name__ == "__main__":
 
     # 解析参数
     args = parser.parse_args()
+
+    # 记录当前时间
+    current_time = datetime.now().isoformat()
     result = main(args)
+    # 将开始时间添加到 result 字典中
+    result["current_time"] = current_time
     if args.only_json:
         print(json.dumps(result, indent=4))
