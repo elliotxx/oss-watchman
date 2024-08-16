@@ -1,10 +1,10 @@
 # oss-watchman
-Cron Statistics, Persistent, Update Report for Open Source Software(OSS), All in Git.
+**Cron Statistics, Persistent, Update Report** for Open Source Software(OSS), **All in Git**.
 
 <!-- OSS-REPORT:START - Do not remove or modify this section -->
 ## OSS Report
 
-Below are the statistics charts for the Open Source Software project [KusionStack/karpor](https://github.com/KusionStack/karpor):
+Below are the statistics charts for the Open Source Software project [KusionStack/karpor](https://github.com/KusionStack/karpor) 👇
 
 ### Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=kusionstack/karpor&type=Date)](https://star-history.com/#kusionstack/karpor&Date)
