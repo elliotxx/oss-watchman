@@ -278,7 +278,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # 从环境变量中读取时区
-    timezone_str = os.getenv("TIMEZONE", "UTC")  # 默认时区设置为'UTC'
+    timezone_str = os.getenv("TZ", "UTC")  # 默认时区设置为'UTC'
     timezone = pytz.timezone(timezone_str)
 
     # 记录当前时间

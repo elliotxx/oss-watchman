@@ -28,11 +28,15 @@ jobs:
         # 如果你的脚本需要其他依赖，在这里安装
         pip install -r requirements.txt
 
+    - name: Set Timezone from .env
+      run: |
+        echo "TZ=$(cat .env | grep TZ | cut -d '=' -f2)" >> $GITHUB_ENV
+
     - name: Get Current Time
       id: date
       run: |
         # 设置环境变量 CURRENT_DATE 为当前时间
-        echo "CURRENT_DATE=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+        echo "CURRENT_DATE=$(date +'%Y-%m-%dT%H:%M:%S%z')" >> $GITHUB_ENV
 
     - name: Run Script
       run: |
