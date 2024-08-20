@@ -2,6 +2,7 @@ import os
 import json
 import argparse
 import requests
+import pytz
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -265,7 +266,6 @@ def main(args):
     return result
 
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="This is a stats script for gitHub project"
@@ -277,8 +277,13 @@ if __name__ == "__main__":
     # 解析参数
     args = parser.parse_args()
 
+    # 从环境变量中读取时区
+    timezone_str = os.getenv("TIMEZONE", "UTC")  # 默认时区设置为'UTC'
+    timezone = pytz.timezone(timezone_str)
+
     # 记录当前时间
-    current_time = datetime.now().isoformat()
+    current_time = datetime.now(timezone).isoformat()
+
     result = main(args)
     # 将开始时间添加到 result 字典中
     result["current_time"] = current_time
