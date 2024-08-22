@@ -35,6 +35,8 @@ def update_chart():
                 }
             )
 
+    # Sort the data by time before converting to DataFrame
+    all_data.sort(key=lambda x: x["current_time"])
     # 将数据转换为DataFrame
     df = pd.DataFrame(all_data)
 
