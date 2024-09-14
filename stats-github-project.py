@@ -237,9 +237,9 @@ if __name__ == "__main__":
 
     # 添加参数
     parser.add_argument("--only_json", action="store_true", help="Only output JSON")
-    parser.add_argument("--before", type=str, help="Filter issues and PRs before this date (ISO 8601 format)")
+    parser.add_argument("--before", type=str, help="Filter issues and PRs before this date (ISO 8601 format), e.g., '2024-08-20T15:56:40+08:00', '2024-08-20T07:56:40Z'")
     parser.add_argument("--fix-data", action="store_true", help="Fix data in the 'data' directory")
-    parser.add_argument("--complete-data", action="store_true", help="Complete missing data in the 'data' directory")
+    parser.add_argument("--complete-data-since", type=str, help="Complete missing data in the 'data' directory starting from this date (ISO 8601 format) or 'FIRST_COMMIT', e.g., '2024-08-20T15:56:40+08:00', '2024-08-20T07:56:40Z'")
 
     # 解析参数
     args = parser.parse_args()
@@ -251,37 +251,44 @@ if __name__ == "__main__":
     # 记录当前时间
     current_time = datetime.now(timezone).isoformat()
 
-    if args.complete_data:
+    if args.complete_data_since:
         data_dir = "data"
-        # 获取第一个提交的时间
-        first_commit_time_str = get_first_commit_time(REPO.split("/")[0], REPO.split("/")[1])
-        if first_commit_time_str:
-            first_commit_time = datetime.fromisoformat(first_commit_time_str)
+        since_time = None
+        if args.complete_data_since == "FIRST_COMMIT":
+            # 获取第一个提交的时间
+            first_commit_time_str = get_first_commit_time(REPO.split("/")[0], REPO.split("/")[1])
+            if first_commit_time_str:
+                first_commit_time = datetime.fromisoformat(first_commit_time_str)
+            else:
+                first_commit_time = None
+            if since_time:
+                print(f"获取到的第一个提交时间为: {first_commit_time}")
+            else:
+                print("未能获取到第一个提交时间,退出")
+                sys.exit(1)
+            since_time = first_commit_time
         else:
-            first_commit_time = None
-        if first_commit_time:
-            print(f"获取到的第一个提交时间为: {first_commit_time}")
-        else:
-            print("未能获取到第一个提交时间,退出")
-            sys.exit(1)
+            complete_data_since = datetime.fromisoformat(args.complete_data_since)
+            since_time = complete_data_since
+        print(f"开始处理数据，起始时间为: {since_time}")
         current_time_obj = datetime.now(timezone)
         print(f"当前时间为: {current_time_obj}")
-        while first_commit_time <= current_time_obj:
-            file_name = f"stats-{first_commit_time.strftime('%Y-%m-%dT%H:%M:%S%z')}.json"
+        while since_time <= current_time_obj:
+            file_name = f"stats-{since_time.strftime('%Y-%m-%dT%H:%M:%S%z')}.json"
             file_path = os.path.join(data_dir, file_name)
-            date_exists = any(file_name.startswith(f"stats-{first_commit_time.strftime('%Y-%m-%d')}") for file_name in os.listdir(data_dir))
+            date_exists = any(file_name.startswith(f"stats-{since_time.strftime('%Y-%m-%d')}") for file_name in os.listdir(data_dir))
             if not date_exists:
-                print(f"开始处理日期: {first_commit_time.strftime('%Y-%m-%d')}")
-                args.before = first_commit_time.isoformat()
+                print(f"开始处理日期: {since_time.strftime('%Y-%m-%d')}")
+                args.before = since_time.isoformat()
                 args.only_json = True
                 result = main(args)
-                result["current_time"] = first_commit_time.isoformat()
+                result["current_time"] = since_time.isoformat()
                 with open(file_path, "w") as f:
                     json.dump(result, f, indent=4)
                 print(f"已创建文件: {file_path}")
             else:
-                print(f"日期 {first_commit_time.strftime('%Y-%m-%d')} 已存在，跳过处理")
-            first_commit_time += timedelta(days=1)
+                print(f"日期 {since_time.strftime('%Y-%m-%d')} 已存在，跳过处理")
+            since_time += timedelta(days=1)
     elif args.fix_data:
         data_dir = "data"
         for filename in os.listdir(data_dir):
