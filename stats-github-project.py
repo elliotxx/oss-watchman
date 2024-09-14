@@ -1,10 +1,11 @@
 import os
 import json
 import argparse
+import sys
 import requests
 import pytz
 from dotenv import load_dotenv
-from datetime import datetime
+from datetime import datetime, timedelta
 
 load_dotenv()  # 默认从当前目录下的 .env 文件加载
 
@@ -21,7 +22,6 @@ headers = {
     "Authorization": f"token {GITHUB_TOKEN}",
     "Accept": "application/vnd.github.v3+json",
 }
-
 
 # 获取贡献者列表
 def get_contributors(owner, repo):
@@ -43,7 +43,6 @@ def get_contributors(owner, repo):
             break
         page += 1
     return all_contributors
-
 
 # 获取issue列表
 def get_issues(owner, repo):
@@ -67,7 +66,6 @@ def get_issues(owner, repo):
         page += 1
     return all_issues
 
-
 # 获取PR列表
 def get_pulls(owner, repo):
     url = f"{BASE_URL}{owner}/{repo}/pulls"
@@ -90,11 +88,9 @@ def get_pulls(owner, repo):
         page += 1
     return all_pulls
 
-
 # 检查用户是否是外部参与者
 def is_external_contributor(contributor, members):
     return contributor not in members
-
 
 # 主函数
 def main(args):
@@ -214,6 +210,25 @@ def main(args):
 
     return result
 
+# 获取第一个提交的时间
+def get_first_commit_time(owner, repo):
+    page = 1
+    while True:
+        url = f"{BASE_URL}{owner}/{repo}/commits"
+        params = {
+            "per_page": 100,  # 每页获取100个提交
+            "page": page,  # 当前页码
+        }
+        response = requests.get(url, headers=headers, params=params)
+        if response.status_code != 200:
+            print("Failed to fetch commits:", response.json())
+            return None
+        commits = response.json()
+        if not commits:
+            break
+        first_commit_time = commits[-1]["commit"]["author"]["date"]
+        page += 1
+    return first_commit_time
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -224,6 +239,7 @@ if __name__ == "__main__":
     parser.add_argument("--only_json", action="store_true", help="Only output JSON")
     parser.add_argument("--before", type=str, help="Filter issues and PRs before this date (ISO 8601 format)")
     parser.add_argument("--fix-data", action="store_true", help="Fix data in the 'data' directory")
+    parser.add_argument("--complete-data", action="store_true", help="Complete missing data in the 'data' directory")
 
     # 解析参数
     args = parser.parse_args()
@@ -235,7 +251,38 @@ if __name__ == "__main__":
     # 记录当前时间
     current_time = datetime.now(timezone).isoformat()
 
-    if args.fix_data:
+    if args.complete_data:
+        data_dir = "data"
+        # 获取第一个提交的时间
+        first_commit_time_str = get_first_commit_time(REPO.split("/")[0], REPO.split("/")[1])
+        if first_commit_time_str:
+            first_commit_time = datetime.fromisoformat(first_commit_time_str)
+        else:
+            first_commit_time = None
+        if first_commit_time:
+            print(f"获取到的第一个提交时间为: {first_commit_time}")
+        else:
+            print("未能获取到第一个提交时间,退出")
+            sys.exit(1)
+        current_time_obj = datetime.now(timezone)
+        print(f"当前时间为: {current_time_obj}")
+        while first_commit_time <= current_time_obj:
+            file_name = f"stats-{first_commit_time.strftime('%Y-%m-%dT%H:%M:%S%z')}.json"
+            file_path = os.path.join(data_dir, file_name)
+            date_exists = any(file_name.startswith(f"stats-{first_commit_time.strftime('%Y-%m-%d')}") for file_name in os.listdir(data_dir))
+            if not date_exists:
+                print(f"开始处理日期: {first_commit_time.strftime('%Y-%m-%d')}")
+                args.before = first_commit_time.isoformat()
+                args.only_json = True
+                result = main(args)
+                result["current_time"] = first_commit_time.isoformat()
+                with open(file_path, "w") as f:
+                    json.dump(result, f, indent=4)
+                print(f"已创建文件: {file_path}")
+            else:
+                print(f"日期 {first_commit_time.strftime('%Y-%m-%d')} 已存在，跳过处理")
+            first_commit_time += timedelta(days=1)
+    elif args.fix_data:
         data_dir = "data"
         for filename in os.listdir(data_dir):
             if filename.startswith("stats-") and filename.endswith(".json"):
