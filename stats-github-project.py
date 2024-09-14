@@ -23,27 +23,6 @@ headers = {
     "Accept": "application/vnd.github.v3+json",
 }
 
-# 获取贡献者列表
-def get_contributors(owner, repo):
-    url = f"{BASE_URL}{owner}/{repo}/contributors"
-    all_contributors = []
-    page = 1
-    while True:
-        params = {
-            "per_page": 100,  # 每页的数量
-            "page": page,  # 当前页码
-        }
-        response = requests.get(url, headers=headers, params=params)
-        if response.status_code != 200:
-            print("Failed to fetch contributors:", response.json())
-            break
-        contributors = response.json()
-        all_contributors.extend(contributors)
-        if len(contributors) < params["per_page"]:
-            break
-        page += 1
-    return all_contributors
-
 # 获取issue列表
 def get_issues(owner, repo):
     url = f"{BASE_URL}{owner}/{repo}/issues"
@@ -97,9 +76,6 @@ def main(args):
     result = {}
 
     owner, repo = REPO.split("/")
-    if not args.only_json:
-        print("开始获取所有贡献者...")
-    contributors = get_contributors(owner, repo)
 
     if not args.only_json:
         print("开始获取所有Issue...")
@@ -111,6 +87,7 @@ def main(args):
     if not args.only_json:
         print()
 
+    # 获取预置的内部成员列表
     members_str = os.getenv("MEMBERS_LIST", default="[]")
     members = json.loads(members_str)
 
@@ -165,15 +142,12 @@ def main(args):
         for pull in external_pulls
     ]
 
-    external_contributors = [
-        contributor["login"]
-        for contributor in contributors
-        if contributor["login"] not in members
-    ]
+    # 统计外部贡献者
+    external_contributors = []
     for pull in external_pulls:
         if is_external_contributor(pull["user"]["login"], members):
             external_contributors.append(pull["user"]["login"])
-    external_contributors = list(set(external_contributors))
+    external_contributors = sorted(list(set(external_contributors)))
 
     if not args.only_json:
         print(
@@ -185,6 +159,7 @@ def main(args):
     result["external_contributors_count"] = len(external_contributors)
     result["external_contributors"] = external_contributors
 
+    # 统计外部参与者
     external_participants = [
         issue["user"]["login"]
         for issue in issues
@@ -195,7 +170,7 @@ def main(args):
         for pull in pulls
         if is_external_contributor(pull["user"]["login"], members)
     ]
-    external_participants = list(set(external_participants))
+    external_participants = sorted(list(set(external_participants)))
 
     if not args.only_json:
         print(
