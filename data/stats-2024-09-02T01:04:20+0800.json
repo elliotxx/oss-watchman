@@ -1,5 +1,5 @@
 {
-    "internal_members_count": 11,
+    "internal_members_count": 13,
     "internal_members": [
         "elliotxx",
         "panshuai-ps",
@@ -11,7 +11,9 @@
         "wolfcode111",
         "weieigao",
         "iamryanchia",
-        "allcontributors[bot]"
+        "allcontributors[bot]",
+        "panshuai111",
+        "hai-tian"
     ],
     "external_issues_count": 16,
     "external_issues": [
@@ -80,7 +82,7 @@
             "user": "Edwin-Li-01"
         }
     ],
-    "external_pulls_count": 19,
+    "external_pulls_count": 18,
     "external_pulls": [
         {
             "title": "fix: fix the path of swagger",
@@ -89,10 +91,6 @@
         {
             "title": "feat: automatically update the appVersion in Chart when release new version",
             "user": "rajeshkio"
-        },
-        {
-            "title": "fix: token",
-            "user": "hai-tian"
         },
         {
             "title": "test: supplementary unit tests for karpor server",
@@ -159,43 +157,41 @@
             "user": "Paradiesvogel7"
         }
     ],
-    "external_contributors_count": 12,
+    "external_contributors_count": 11,
     "external_contributors": [
+        "regend",
+        "z1cheng",
+        "CirillaQL",
         "Paradiesvogel7",
-        "hai-tian",
         "rajeshkio",
-        "virtually-stray",
         "jueli12",
         "JasonHe-WQ",
-        "cheny-alf",
-        "regend",
-        "solarhell",
+        "virtually-stray",
         "peter-wangxu",
-        "z1cheng",
-        "CirillaQL"
+        "solarhell",
+        "cheny-alf"
     ],
-    "external_participants_count": 20,
+    "external_participants_count": 19,
     "external_participants": [
         "ywgx",
-        "wenxuanwu",
-        "solarhell",
-        "Edwin-Li-01",
-        "z1cheng",
-        "Paradiesvogel7",
-        "jueli12",
-        "cheny-alf",
-        "eryajf",
-        "peter-wangxu",
-        "T1-leiyang",
-        "hai-tian",
-        "danielstankw",
-        "virtually-stray",
-        "JasonHe-WQ",
-        "kinbod",
-        "arrowfeng",
         "CirillaQL",
+        "Paradiesvogel7",
         "rajeshkio",
-        "regend"
+        "arrowfeng",
+        "eryajf",
+        "z1cheng",
+        "danielstankw",
+        "wenxuanwu",
+        "peter-wangxu",
+        "solarhell",
+        "virtually-stray",
+        "cheny-alf",
+        "kinbod",
+        "regend",
+        "jueli12",
+        "JasonHe-WQ",
+        "T1-leiyang",
+        "Edwin-Li-01"
     ],
     "current_time": "2024-09-02T01:04:20.934104+08:00"
 }

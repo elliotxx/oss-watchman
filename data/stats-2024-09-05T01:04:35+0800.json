@@ -1,5 +1,5 @@
 {
-    "internal_members_count": 11,
+    "internal_members_count": 13,
     "internal_members": [
         "elliotxx",
         "panshuai-ps",
@@ -11,9 +11,11 @@
         "wolfcode111",
         "weieigao",
         "iamryanchia",
-        "allcontributors[bot]"
+        "allcontributors[bot]",
+        "panshuai111",
+        "hai-tian"
     ],
-    "external_issues_count": 50,
+    "external_issues_count": 17,
     "external_issues": [
         {
             "title": "Install issue",
@@ -82,150 +84,10 @@
         {
             "title": "karpor-server \u6dfb\u52a0resources \u58f0\u660e",
             "user": "Edwin-Li-01"
-        },
-        {
-            "title": "Refactor Karpor's Helm charts",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Karpor's pipeline adapts to the latest version release process.",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Define the version release process for Karpor.",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Migration of cert-generator tool to karpor repository",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Quality: Frontend Code Quality Improvement",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Quality: Backend Quality Governance",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Experience: Dashboard User Experience Optimization (Phase II)",
-            "user": "panshuai111"
-        },
-        {
-            "title": "ResourceSyncer: When deleting a cluster, the corresponding data in Elasticsearch must be cleared.",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Search: Fix Bug in Searching for labels.key",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Feat (Frontend) : Support cross-cluster topology in insight page",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Feat: Support aggregation search on elasticsearch",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Feat (Backend) : Support cross-cluster topology in insight page",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Deploy: Support generate CA and kubeconfig in helm charts",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Feat: Support SQL-based full-text search",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Feat: Support for Elasticsearch as Backend Storage",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Design: Research on Multi-Cluster Cost Monitoring",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Design: Research on  Built-in Search Engine",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Feat: Support SQL-based wildcard search",
-            "user": "panshuai111"
-        },
-        {
-            "title": "ResourceSyncer stability improved",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Syncer: Delete redundant resource from ES when syncer starts",
-            "user": "panshuai111"
-        },
-        {
-            "title": "ResourceSyncer: Resources not being deleted correctly in elasticsearch",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Syncer: Regist Kubernetes' core group resources to karpor",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Installation: Build Karbour's manifest and test on KIND cluster",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Installation: Write quick start to guide users to install karbour",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Installation:  Regist default sync strategy when server started",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Installation: Build an helm chart to install karbour",
-            "user": "panshuai111"
-        },
-        {
-            "title": "ResourceSyncer: Automatically update the synchronization strategy when new clusters or resources are added.",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Syncer: Enable Karpor to support resources such as configmap, so that syncer can do leader election.",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Syncer: Enhance the observability of syncer, including status and metrics.",
-            "user": "panshuai111"
-        },
-        {
-            "title": "ResourceSyncer installation, functional testing and bug fixes",
-            "user": "panshuai111"
-        },
-        {
-            "title": "ClusterSyncer: ResourceSyncer implementation",
-            "user": "panshuai111"
-        },
-        {
-            "title": "Run without kube-apiserver",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: Provide a search API for retrieving multi-cluster resources from storage",
-            "user": "panshuai111"
         }
     ],
-    "external_pulls_count": 79,
+    "external_pulls_count": 18,
     "external_pulls": [
-        {
-            "title": "feat: search by natural language",
-            "user": "hai-tian"
-        },
-        {
-            "title": "search by natural language",
-            "user": "hai-tian"
-        },
         {
             "title": "fix: fix the path of swagger",
             "user": "regend"
@@ -233,10 +95,6 @@
         {
             "title": "feat: automatically update the appVersion in Chart when release new version",
             "user": "rajeshkio"
-        },
-        {
-            "title": "fix: token",
-            "user": "hai-tian"
         },
         {
             "title": "test: supplementary unit tests for karpor server",
@@ -301,279 +159,43 @@
         {
             "title": "feat(ui): added german translations",
             "user": "Paradiesvogel7"
-        },
-        {
-            "title": "chore(ci): different tags trigger different release pipelines",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add cert generator",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: unit test of manager/insight/test_helper",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: incorrect number of topology",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: generate cli document",
-            "user": "panshuai111"
-        },
-        {
-            "title": "refactor: remove cafed in relationship",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: lint problems",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: bugfix of resource group rule",
-            "user": "panshuai111"
-        },
-        {
-            "title": "test: supplement unit tests of package syncer",
-            "user": "panshuai111"
-        },
-        {
-            "title": "chore: supplement unit tests",
-            "user": "panshuai111"
-        },
-        {
-            "title": "chore: calculate coverage rate",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: remove the incorrect unit test",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: delete cluster's resource when cluster is deleted",
-            "user": "panshuai111"
-        },
-        {
-            "title": "refactor: elasticsearch template",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support topo of custom resource group",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add job in helm to generator CA and kubeconfig",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support sql-based full-text search",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: command line argument simplification",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: storing data through elasticsearch",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support sql-based wildcard search",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support buildin authN and authZ",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: missing deletion event",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: deletion event missing",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: delete redundant resource from ES when syncer starts",
-            "user": "panshuai111"
-        },
-        {
-            "title": "refactor: refactor elasticsearch options",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: fix the error of cannot assign requested address",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: use helm to install karbour",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: increase max result window to 1000000",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: the issue of resources not being deleted in elasticsearch",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: Regist kubernetes namespace to karbour server",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support registering the default sync strategy when the server starts",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support matching clusters using wildcards",
-            "user": "panshuai111"
-        },
-        {
-            "title": "chore: add manifests to deploy karbour",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: fixed the issue of synchronizing multiple resources",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support construction of cluster certificates for service accoun\u2026",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: set controller logger",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add resource syncer",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support cluster install",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat(frontend): support search based on SQL syntax",
-            "user": "panshuai111"
-        },
-        {
-            "title": "docs: search dsl design",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: the file of type png does not exist",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix:  capitalization errors of App.tsx",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: npm install error",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat(ui): support resource insight and cluster insight",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat(ui): support resource insight and cluster insight",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add rest storage of SyncClusterResources and TransformRule ",
-            "user": "panshuai111"
-        },
-        {
-            "title": "WIP: feat: support buildin authentication",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: run without kube-apiserver",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: search data from search storage layer",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add storage layer",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add uniresource type",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: support setting cross-domain options",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add karbour dashboard",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add resources related to sync",
-            "user": "panshuai111"
-        },
-        {
-            "title": "feat: add search api group",
-            "user": "panshuai111"
-        },
-        {
-            "title": "chore: add docker file",
-            "user": "panshuai111"
-        },
-        {
-            "title": "WIP: feat: support search api",
-            "user": "panshuai111"
-        },
-        {
-            "title": "fix: change update cluster strategy",
-            "user": "panshuai111"
         }
     ],
-    "external_contributors_count": 13,
+    "external_contributors_count": 11,
     "external_contributors": [
-        "z1cheng",
-        "virtually-stray",
-        "panshuai111",
-        "solarhell",
-        "Paradiesvogel7",
-        "JasonHe-WQ",
         "regend",
-        "peter-wangxu",
-        "rajeshkio",
-        "hai-tian",
+        "z1cheng",
         "CirillaQL",
+        "Paradiesvogel7",
+        "rajeshkio",
         "jueli12",
+        "JasonHe-WQ",
+        "virtually-stray",
+        "peter-wangxu",
+        "solarhell",
         "cheny-alf"
     ],
-    "external_participants_count": 21,
+    "external_participants_count": 19,
     "external_participants": [
-        "T1-leiyang",
-        "Paradiesvogel7",
-        "danielstankw",
-        "JasonHe-WQ",
-        "rajeshkio",
-        "kinbod",
-        "eryajf",
-        "jueli12",
-        "cheny-alf",
-        "z1cheng",
-        "virtually-stray",
-        "peter-wangxu",
-        "wenxuanwu",
-        "Edwin-Li-01",
-        "panshuai111",
-        "regend",
+        "ywgx",
         "CirillaQL",
+        "Paradiesvogel7",
+        "rajeshkio",
         "arrowfeng",
+        "eryajf",
+        "z1cheng",
+        "danielstankw",
+        "wenxuanwu",
+        "peter-wangxu",
         "solarhell",
-        "hai-tian",
-        "ywgx"
+        "virtually-stray",
+        "cheny-alf",
+        "kinbod",
+        "regend",
+        "jueli12",
+        "JasonHe-WQ",
+        "T1-leiyang",
+        "Edwin-Li-01"
     ],
     "current_time": "2024-09-05T01:04:35.483069+08:00"
 }

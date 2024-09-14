@@ -1,5 +1,5 @@
 {
-    "internal_members_count": 10,
+    "internal_members_count": 13,
     "internal_members": [
         "elliotxx",
         "panshuai-ps",
@@ -10,7 +10,10 @@
         "dependabot[bot]",
         "wolfcode111",
         "weieigao",
-        "iamryanchia"
+        "iamryanchia",
+        "allcontributors[bot]",
+        "panshuai111",
+        "hai-tian"
     ],
     "external_issues_count": 15,
     "external_issues": [
@@ -75,15 +78,11 @@
             "user": "Edwin-Li-01"
         }
     ],
-    "external_pulls_count": 18,
+    "external_pulls_count": 17,
     "external_pulls": [
         {
             "title": "feat: automatically update the appVersion in Chart when release new version",
             "user": "rajeshkio"
-        },
-        {
-            "title": "fix: token",
-            "user": "hai-tian"
         },
         {
             "title": "test: supplementary unit tests for karpor server",
@@ -106,7 +105,7 @@
             "user": "CirillaQL"
         },
         {
-            "title": "[WIP] feat: support natural language as a search method",
+            "title": "feat: support natural language as a search method",
             "user": "jueli12"
         },
         {
@@ -150,42 +149,40 @@
             "user": "Paradiesvogel7"
         }
     ],
-    "external_contributors_count": 12,
+    "external_contributors_count": 11,
     "external_contributors": [
         "regend",
-        "jueli12",
-        "rajeshkio",
-        "peter-wangxu",
-        "JasonHe-WQ",
-        "solarhell",
-        "virtually-stray",
         "z1cheng",
-        "hai-tian",
-        "Paradiesvogel7",
-        "cheny-alf",
-        "CirillaQL"
-    ],
-    "external_participants_count": 19,
-    "external_participants": [
-        "eryajf",
-        "cheny-alf",
-        "danielstankw",
-        "peter-wangxu",
-        "solarhell",
-        "Paradiesvogel7",
-        "JasonHe-WQ",
-        "virtually-stray",
-        "arrowfeng",
-        "rajeshkio",
-        "z1cheng",
-        "jueli12",
         "CirillaQL",
-        "regend",
-        "Edwin-Li-01",
+        "Paradiesvogel7",
+        "rajeshkio",
+        "jueli12",
+        "JasonHe-WQ",
+        "virtually-stray",
+        "peter-wangxu",
+        "solarhell",
+        "cheny-alf"
+    ],
+    "external_participants_count": 18,
+    "external_participants": [
         "kinbod",
+        "regend",
+        "z1cheng",
+        "CirillaQL",
+        "danielstankw",
+        "Paradiesvogel7",
+        "rajeshkio",
+        "jueli12",
+        "arrowfeng",
+        "JasonHe-WQ",
+        "T1-leiyang",
+        "solarhell",
+        "peter-wangxu",
         "ywgx",
-        "hai-tian",
-        "T1-leiyang"
+        "eryajf",
+        "Edwin-Li-01",
+        "virtually-stray",
+        "cheny-alf"
     ],
     "current_time": "2024-08-20T15:56:41.061021+08:00"
 }
