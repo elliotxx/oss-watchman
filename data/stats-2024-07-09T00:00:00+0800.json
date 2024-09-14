@@ -73,29 +73,22 @@
             "user": "Paradiesvogel7"
         }
     ],
-    "external_contributors_count": 10,
+    "external_contributors_count": 3,
     "external_contributors": [
-        "solarhell",
-        "cheny-alf",
         "Paradiesvogel7",
-        "JasonHe-WQ",
-        "virtually-stray",
-        "CirillaQL",
-        "regend",
         "peter-wangxu",
-        "z1cheng",
-        "rajeshkio"
+        "virtually-stray"
     ],
     "external_participants_count": 8,
     "external_participants": [
+        "CirillaQL",
+        "Edwin-Li-01",
         "Paradiesvogel7",
         "arrowfeng",
         "eryajf",
-        "virtually-stray",
-        "CirillaQL",
-        "ywgx",
         "peter-wangxu",
-        "Edwin-Li-01"
+        "virtually-stray",
+        "ywgx"
     ],
     "current_time": "2024-07-09T00:00:00+08:00"
 }
