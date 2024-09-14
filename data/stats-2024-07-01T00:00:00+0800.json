@@ -1,0 +1,62 @@
+{
+    "internal_members_count": 13,
+    "internal_members": [
+        "elliotxx",
+        "panshuai-ps",
+        "ffforest",
+        "ruquanzhao",
+        "SparkYuan",
+        "healthjyk",
+        "dependabot[bot]",
+        "wolfcode111",
+        "weieigao",
+        "iamryanchia",
+        "allcontributors[bot]",
+        "panshuai111",
+        "hai-tian"
+    ],
+    "external_issues_count": 0,
+    "external_issues": [],
+    "external_pulls_count": 5,
+    "external_pulls": [
+        {
+            "title": "feat(lang): translated UI to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "docs(lang): translated SECURITY.md to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "fix: added missing german translation",
+            "user": "Paradiesvogel7"
+        },
+        {
+            "title": "docs(lang): translated README to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "feat(ui): added german translations",
+            "user": "Paradiesvogel7"
+        }
+    ],
+    "external_contributors_count": 10,
+    "external_contributors": [
+        "solarhell",
+        "cheny-alf",
+        "Paradiesvogel7",
+        "JasonHe-WQ",
+        "virtually-stray",
+        "CirillaQL",
+        "regend",
+        "peter-wangxu",
+        "z1cheng",
+        "rajeshkio"
+    ],
+    "external_participants_count": 2,
+    "external_participants": [
+        "Paradiesvogel7",
+        "virtually-stray"
+    ],
+    "current_time": "2024-07-01T00:00:00+08:00"
+}
