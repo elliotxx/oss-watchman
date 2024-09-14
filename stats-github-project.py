@@ -222,7 +222,8 @@ if __name__ == "__main__":
 
     # 添加参数
     parser.add_argument("--only_json", action="store_true", help="Only output JSON")
-    parser.add_argument("--before", type=str, help="Filter issues and PRs before this date (ISO 8601 format). Example: 2023-10-01T00:00:00Z, 2023-10-01T00:00:00+08:00")
+    parser.add_argument("--before", type=str, help="Filter issues and PRs before this date (ISO 8601 format)")
+    parser.add_argument("--fix-data", action="store_true", help="Fix data in the 'data' directory")
 
     # 解析参数
     args = parser.parse_args()
@@ -234,8 +235,29 @@ if __name__ == "__main__":
     # 记录当前时间
     current_time = datetime.now(timezone).isoformat()
 
-    result = main(args)
-    # 将开始时间添加到 result 字典中
-    result["current_time"] = current_time
-    if args.only_json:
-        print(json.dumps(result, indent=4))
+    if args.fix_data:
+        data_dir = "data"
+        for filename in os.listdir(data_dir):
+            if filename.startswith("stats-") and filename.endswith(".json"):
+                file_path = os.path.join(data_dir, filename)
+                # 从 json 文件中提取 current_time 作为 before_time
+                with open(file_path, "r") as f:
+                    data = json.load(f)
+                    before_time = data.get("current_time", None)
+                if not before_time:
+                    print(f"未提取到 before_time，跳过文件 {file_path}")
+                    continue
+                args.before = before_time
+                args.only_json = True
+                result = main(args)
+                result["current_time"] = before_time
+                # 覆盖原文件
+                with open(file_path, "w") as f:
+                    json.dump(result, f, indent=4)
+                print(f"Updated {file_path}")
+    else:
+        result = main(args)
+        # 将开始时间添加到 result 字典中
+        result["current_time"] = current_time
+        if args.only_json:
+            print(json.dumps(result, indent=4))
