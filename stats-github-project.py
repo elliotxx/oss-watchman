@@ -26,26 +26,19 @@ headers = {
 # 获取贡献者列表
 def get_contributors(owner, repo):
     url = f"{BASE_URL}{owner}/{repo}/contributors"
-    # response = requests.get(url, headers=headers)
-    # contributors = response.json()
-    # return contributors
     all_contributors = []
     page = 1
     while True:
-        # 准备请求参数
         params = {
             "per_page": 100,  # 每页的数量
             "page": page,  # 当前页码
         }
-        # 发送请求
         response = requests.get(url, headers=headers, params=params)
         if response.status_code != 200:
             print("Failed to fetch contributors:", response.json())
             break
         contributors = response.json()
-        # 将当前页的贡献者添加到列表
         all_contributors.extend(contributors)
-        # 如果返回的贡献者数量小于每页的数量，则没有更多页
         if len(contributors) < params["per_page"]:
             break
         page += 1
@@ -55,32 +48,20 @@ def get_contributors(owner, repo):
 # 获取issue列表
 def get_issues(owner, repo):
     url = f"{BASE_URL}{owner}/{repo}/issues"
-    # params = {
-    #     "state": "all",  # 获取所有状态的issue
-    #     "sort": "created",  # 按创建时间排序
-    #     "direction": "desc",  # 降序
-    # }
-    # response = requests.get(url, headers=headers, params=params)
-    # issues = response.json()
-    # return issues
     all_issues = []
     page = 1
     while True:
-        # 准备请求参数
         params = {
             "state": "all",  # 获取所有状态的issues
             "per_page": 100,  # 每页的数量
             "page": page,  # 当前页码
         }
-        # 发送请求
         response = requests.get(url, headers=headers, params=params)
         if response.status_code != 200:
             print("Failed to fetch issues:", response.json())
             break
         issues = response.json()
-        # 将当前页的issues添加到列表
         all_issues.extend(issues)
-        # 如果返回的issues数量小于每页的数量，则没有更多页
         if len(issues) < params["per_page"]:
             break
         page += 1
@@ -90,27 +71,20 @@ def get_issues(owner, repo):
 # 获取PR列表
 def get_pulls(owner, repo):
     url = f"{BASE_URL}{owner}/{repo}/pulls"
-    # response = requests.get(url, headers=headers)
-    # pulls = response.json()
-    # return pulls
     all_pulls = []
     page = 1
     while True:
-        # 准备请求参数
         params = {
             "state": "all",  # 获取所有状态的PRs
             "per_page": 100,  # 每页的数量
             "page": page,  # 当前页码
         }
-        # 发送请求
         response = requests.get(url, headers=headers, params=params)
         if response.status_code != 200:
             print("Failed to fetch pulls:", response.json())
             break
         pulls = response.json()
-        # 将当前页的PRs添加到列表
         all_pulls.extend(pulls)
-        # 如果返回的PRs数量小于每页的数量，则没有更多页
         if len(pulls) < params["per_page"]:
             break
         page += 1
@@ -141,10 +115,7 @@ def main(args):
     if not args.only_json:
         print()
 
-    # 从环境变量中读取成员列表
-    members_str = os.getenv(
-        "MEMBERS_LIST", default="[]"
-    )  # 默认为空列表以防环境变量未设置
+    members_str = os.getenv("MEMBERS_LIST", default="[]")
     members = json.loads(members_str)
 
     if not args.only_json:
@@ -155,17 +126,11 @@ def main(args):
     result["internal_members_count"] = len(members)
     result["internal_members"] = members
 
-    # issue_users = [
-    #     issue["user"]["login"]
-    #     for issue in issues
-    #     if is_external_contributor(issue["user"]["login"], members)
-    # ]
-    # issue_users = list(set(issue_users))
-    # print("issue 数量：", len(issues))
-    # print("issue 用户列表：")
-    # for user in issue_users:
-    #     print(user)
-    # print()
+    # 过滤指定时间之前的Issue和PR
+    if args.before:
+        before_time = datetime.fromisoformat(args.before).replace(tzinfo=pytz.UTC)
+        issues = [issue for issue in issues if datetime.fromisoformat(issue["created_at"]) <= before_time]
+        pulls = [pull for pull in pulls if datetime.fromisoformat(pull["created_at"]) <= before_time]
 
     external_issues = [
         issue
@@ -179,27 +144,12 @@ def main(args):
         if is_external_contributor(pull["user"]["login"], members)
     ]
 
-    # 打印外部参与者名单
-    # print("外部参与者名单：")
-    # for contributor in contributors:
-    #     if is_external_contributor(contributor, members):
-    #         print(contributor["login"])
-
-    # # 将结果写入CSV文件
-    # with open("external_contributors.csv", "w", newline="", encoding="utf-8") as file:
-    #     writer = csv.writer(file)
-    #     writer.writerow(["Login", "Contributions"])
-    #     for contributor in contributors:
-    #         if is_external_contributor(contributor, members):
-    #             writer.writerow([contributor["login"], contributor["contributions"]])
-
     if not args.only_json:
         print(f"外部用户提交的issue数量：{len(external_issues)}")
         print(f"外部用户提交的PR数量：{len(external_pulls)}")
         print()
         print("外部用户提交的issue列表：")
         for issue in external_issues:
-            # print(issue)
             print(issue["title"] + " by " + issue["user"]["login"])
         print()
 
@@ -239,7 +189,6 @@ def main(args):
     result["external_contributors_count"] = len(external_contributors)
     result["external_contributors"] = external_contributors
 
-    # 统计外部参与者的issue和PR
     external_participants = [
         issue["user"]["login"]
         for issue in issues
@@ -273,6 +222,7 @@ if __name__ == "__main__":
 
     # 添加参数
     parser.add_argument("--only_json", action="store_true", help="Only output JSON")
+    parser.add_argument("--before", type=str, help="Filter issues and PRs before this date (ISO 8601 format). Example: 2023-10-01T00:00:00Z, 2023-10-01T00:00:00+08:00")
 
     # 解析参数
     args = parser.parse_args()
