@@ -9,21 +9,21 @@ Below are the statistics charts for the Open Source Software project [KusionStac
 ### Star History
 [![Star History Chart](https://api.star-history.com/svg?repos=kusionstack/karpor&type=Date)](https://star-history.com/#kusionstack/karpor&Date)
 
-### External Issues Over Time
+### External Issues
 This chart shows the number of external issues reported over time.
-![External Issues Over Time](chart/external_issues_count_over_time.png)
+![External Issues](chart/external_issues_count_over_time.png)
 
-### External Pull Requests Over Time
+### External Pull Requests
 This chart illustrates the trend of external pull requests submitted.
-![External Pull Requests Over Time](chart/external_pulls_count_over_time.png)
+![External Pull Requests](chart/external_pulls_count_over_time.png)
 
-### External Contributors Over Time
+### External Contributors
 The chart depicts the count of unique external contributors participating in the project.
-![External Contributors Over Time](chart/external_contributors_count_over_time.png)
+![External Contributors](chart/external_contributors_count_over_time.png)
 
-### External Participants Over Time
+### External Participants
 This graph represents the overall number of external participants engaging with the project.
-![External Participants Over Time](chart/external_participants_count_over_time.png)
+![External Participants](chart/external_participants_count_over_time.png)
 
 <!-- OSS-REPORT:END -->
 
