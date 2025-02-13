@@ -15,8 +15,72 @@
         "panshuai111",
         "hai-tian"
     ],
-    "external_issues_count": 19,
+    "external_issues_count": 35,
     "external_issues": [
+        {
+            "title": "Is there a way to register a cluster declaratively?",
+            "user": "kubebn"
+        },
+        {
+            "title": "Topology get Error Pod message",
+            "user": "Cookiery"
+        },
+        {
+            "title": "Azure OpenAI is not available",
+            "user": "Cookiery"
+        },
+        {
+            "title": "karpor-syncer index out of range",
+            "user": "Cookiery"
+        },
+        {
+            "title": "How to register a gke cluster?",
+            "user": "chaishiqi"
+        },
+        {
+            "title": "why use elasticsearch,  And Support Other AI Model ?",
+            "user": "fyqls"
+        },
+        {
+            "title": "why use elasticsearch,  And Support Other AI Model ?",
+            "user": "fyqls"
+        },
+        {
+            "title": "Planning: v0.8.0",
+            "user": "github-actions[bot]"
+        },
+        {
+            "title": "Planning: v0.7.0",
+            "user": "github-actions[bot]"
+        },
+        {
+            "title": "Planning: v0.6.0",
+            "user": "github-actions[bot]"
+        },
+        {
+            "title": "Add a button to refresh the configuration of the YAML resource",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "You can view all pod logs under a Deployment",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "Add a user system where each user can manage their own cluster",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "Searching for custom resources using SQL failed",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "Makefile does not pick up go alias: consider introducing a variable",
+            "user": "rajp152k"
+        },
+        {
+            "title": "'unknown revision v0.0.0' errors caused by the k8s.io/kube-aggregator",
+            "user": "cheny-alf"
+        },
         {
             "title": "[Helm Install Failed] An exception occurred during the deployment of the ES service.",
             "user": "cheny-alf"
@@ -94,8 +158,32 @@
             "user": "Edwin-Li-01"
         }
     ],
-    "external_pulls_count": 22,
+    "external_pulls_count": 28,
     "external_pulls": [
+        {
+            "title": "feat: add llm api proxy parameters",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "docs: add /server-configs",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "fix: the index out of range when es resp is empty",
+            "user": "Cookiery"
+        },
+        {
+            "title": "docs: add Japanese documents",
+            "user": "eltociear"
+        },
+        {
+            "title": "docs: grammar fix",
+            "user": "rajp152k"
+        },
+        {
+            "title": "chore: fix \"go list -m all\" execution",
+            "user": "cheny-alf"
+        },
         {
             "title": "docs: add license scan report and status",
             "user": "fossabot"
@@ -185,38 +273,51 @@
             "user": "Paradiesvogel7"
         }
     ],
-    "external_contributors_count": 12,
+    "external_contributors_count": 16,
     "external_contributors": [
         "CirillaQL",
+        "Cookiery",
         "JasonHe-WQ",
         "Paradiesvogel7",
         "cheny-alf",
+        "eltociear",
         "fossabot",
+        "jinjiaKarl",
         "jueli12",
         "peter-wangxu",
         "rajeshkio",
+        "rajp152k",
         "regend",
         "solarhell",
         "virtually-stray",
         "z1cheng"
     ],
-    "external_participants_count": 21,
+    "external_participants_count": 30,
     "external_participants": [
         "CirillaQL",
+        "Cookiery",
         "Edwin-Li-01",
+        "Jamel-jun",
         "JasonHe-WQ",
         "Paradiesvogel7",
         "T1-leiyang",
         "arrowfeng",
+        "chaishiqi",
         "cheny-alf",
         "danielstankw",
+        "eltociear",
         "eryajf",
         "fossabot",
+        "fyqls",
+        "github-actions[bot]",
         "haiwu",
+        "jinjiaKarl",
         "jueli12",
         "kinbod",
+        "kubebn",
         "peter-wangxu",
         "rajeshkio",
+        "rajp152k",
         "regend",
         "solarhell",
         "virtually-stray",
@@ -224,5 +325,5 @@
         "ywgx",
         "z1cheng"
     ],
-    "current_time": "2024-12-13T01:04:27.182980+08:00"
+    "current_time": "2025-02-07T15:56:40+08:00"
 }

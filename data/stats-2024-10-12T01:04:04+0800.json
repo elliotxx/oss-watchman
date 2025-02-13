@@ -34,7 +34,7 @@
             "user": "regend"
         },
         {
-            "title": "\u589e\u52a0openapi\uff0c\u652f\u6301webhook\u7b49\u6269\u5c55\u529f\u80fd",
+            "title": "Increase OpenAPI and support extended functions such as webhook",
             "user": "kinbod"
         },
         {
@@ -70,7 +70,7 @@
             "user": "ywgx"
         },
         {
-            "title": "\u662f\u5426\u8ba1\u5212\u589e\u52a0 docker-compose \u62c9\u8d77\u7684\u90e8\u7f72\u65b9\u5f0f\u53ca\u6587\u6863",
+            "title": "Do you plan to add the deployment method and documentation of Docker-compose?",
             "user": "eryajf"
         },
         {
