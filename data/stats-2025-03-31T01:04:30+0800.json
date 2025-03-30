@@ -1,0 +1,463 @@
+{
+    "internal_members_count": 13,
+    "internal_members": [
+        "elliotxx",
+        "panshuai-ps",
+        "ffforest",
+        "ruquanzhao",
+        "SparkYuan",
+        "healthjyk",
+        "dependabot[bot]",
+        "wolfcode111",
+        "weieigao",
+        "iamryanchia",
+        "allcontributors[bot]",
+        "panshuai111",
+        "hai-tian"
+    ],
+    "external_issues_count": 47,
+    "external_issues": [
+        {
+            "title": "Kubeaudit was deprecated",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "Token Based Cluster Context Not Working",
+            "user": "kmadel"
+        },
+        {
+            "title": "Feat: Enhance cluster status and add syncregistry status",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "Can we query custom resources?",
+            "user": "fabricebrito"
+        },
+        {
+            "title": "Update: go version and go mod",
+            "user": "Cookiery"
+        },
+        {
+            "title": "Integration: compatible with other multi-cloud addon.",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "Waiting for a volume to be created either by the external provisioner 'rook-ceph.rbd.csi.ceph.com' or manually by the system administrator.",
+            "user": "GurdipS5"
+        },
+        {
+            "title": "Question: How to run `karpor syncer` locally.",
+            "user": "Cookiery"
+        },
+        {
+            "title": "BUG: Failed to sync cache for CRD resource during cluster initialization",
+            "user": "Cookiery"
+        },
+        {
+            "title": "Karpor behind ingress getting error recv() failed (104: Connection reset by peer) while reading upstream",
+            "user": "vickydev90"
+        },
+        {
+            "title": "Feat: Expand the AI Interpret Result",
+            "user": "Cookiery"
+        },
+        {
+            "title": "Chore: Improve the high availability level in large-scale cluster deployment.",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "Is there a way to register a cluster declaratively?",
+            "user": "kubebn"
+        },
+        {
+            "title": "Topology get Error Pod message",
+            "user": "Cookiery"
+        },
+        {
+            "title": "Azure OpenAI is not available",
+            "user": "Cookiery"
+        },
+        {
+            "title": "karpor-syncer index out of range",
+            "user": "Cookiery"
+        },
+        {
+            "title": "How to register a gke cluster?",
+            "user": "chaishiqi"
+        },
+        {
+            "title": "why use elasticsearch,  And Support Other AI Model ?",
+            "user": "fyqls"
+        },
+        {
+            "title": "why use elasticsearch,  And Support Other AI Model ?",
+            "user": "fyqls"
+        },
+        {
+            "title": "Planning: v0.8.0",
+            "user": "github-actions[bot]"
+        },
+        {
+            "title": "Planning: v0.7.0",
+            "user": "github-actions[bot]"
+        },
+        {
+            "title": "Planning: v0.6.0",
+            "user": "github-actions[bot]"
+        },
+        {
+            "title": "Add a button to refresh the configuration of the YAML resource",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "You can view all pod logs under a Deployment",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "Add a user system where each user can manage their own cluster",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "Searching for custom resources using SQL failed",
+            "user": "Jamel-jun"
+        },
+        {
+            "title": "Makefile does not pick up go alias: consider introducing a variable",
+            "user": "rajp152k"
+        },
+        {
+            "title": "'unknown revision v0.0.0' errors caused by the k8s.io/kube-aggregator",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "[Helm Install Failed] An exception occurred during the deployment of the ES service.",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "kubeaudit being deprecated, what next? ",
+            "user": "haiwu"
+        },
+        {
+            "title": "Install issue",
+            "user": "danielstankw"
+        },
+        {
+            "title": "helm \u90e8\u7f72karpor \u5931\u8d25 karpor-syncer \u542f\u52a8\u5931\u8d25\u62a5\u95197443\u7aef\u53e3\u8fde\u63a5\u5931\u8d25",
+            "user": "wenxuanwu"
+        },
+        {
+            "title": "\u4e0a\u4f20kubeconfig\u9a8c\u8bc1\u63d0\u793a\u4e0d\u7b26\u5408\u771f\u5b9e\u60c5\u51b5",
+            "user": "regend"
+        },
+        {
+            "title": "Increase OpenAPI and support extended functions such as webhook",
+            "user": "kinbod"
+        },
+        {
+            "title": "Performance Issue: Cluster Management audit/score/topology api response timeout",
+            "user": "CirillaQL"
+        },
+        {
+            "title": "[Helm Install Error] Cluster unreachable: connection refused",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "error convert kubeconfig to cluster: failed to parse credential from kubeconfig",
+            "user": "danielstankw"
+        },
+        {
+            "title": "FailedAttachVolume",
+            "user": "danielstankw"
+        },
+        {
+            "title": "Extend Helm Chart",
+            "user": "danielstankw"
+        },
+        {
+            "title": "\u672c\u5730\u90e8\u7f72\u5f00\u53d1\u73af\u5883\uff0c\u63a5\u5165\u96c6\u7fa4\u540e\u8d44\u6e90\u62d3\u6251\u4e3a\u7a7a",
+            "user": "T1-leiyang"
+        },
+        {
+            "title": "karpor \u90e8\u7f72\u95ee\u9898",
+            "user": "arrowfeng"
+        },
+        {
+            "title": "\u611f\u89c9\u6709\u70b9\u7b80\u5355\u95ee\u9898\u590d\u6742\u5316 \u5efa\u8bae\u4f7f\u7528 https://ki.xabc.io",
+            "user": "ywgx"
+        },
+        {
+            "title": "Do you plan to add the deployment method and documentation of Docker-compose?",
+            "user": "eryajf"
+        },
+        {
+            "title": "\u5e76\u975e\u6240\u6709\u7528\u6237\u90fd\u6709PVC\uff0c\u5efa\u8baeetcd\u652f\u6301hostPath Volume",
+            "user": "Edwin-Li-01"
+        },
+        {
+            "title": "Register Cluster \u4e0a\u4f20\u591a\u96c6\u7fa4config\u6587\u4ef6\u5931\u8d25",
+            "user": "CirillaQL"
+        },
+        {
+            "title": "deployment \u955c\u50cf\u58f0\u660e\u4f18\u5316",
+            "user": "Edwin-Li-01"
+        },
+        {
+            "title": "karpor-server \u6dfb\u52a0resources \u58f0\u660e",
+            "user": "Edwin-Li-01"
+        }
+    ],
+    "external_pulls_count": 46,
+    "external_pulls": [
+        {
+            "title": "Korean language support",
+            "user": "nueavv"
+        },
+        {
+            "title": "feat: support wildcard resource",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "feat(search): integrate MeiliSearch as a new search backend",
+            "user": "wujunwei"
+        },
+        {
+            "title": "docs: remove invalid links",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "Feat karpor agent highversion",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "feat: add high-availability mode for large-scale scene",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "feat: add high-availability mode for large-scale scene",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "feat(yaml): add refresh button & refresh when switch the tab",
+            "user": "LeoSofl"
+        },
+        {
+            "title": "feat(yaml): add refresh button & refresh on tab switch",
+            "user": "LeoSofl"
+        },
+        {
+            "title": "Feat/yaml refresh button",
+            "user": "LeoSofl"
+        },
+        {
+            "title": "refactor(ui): optimize AI-Interpret Card Expansion",
+            "user": "MDA1422"
+        },
+        {
+            "title": "WIP feat:MCP Support init",
+            "user": "rajp152k"
+        },
+        {
+            "title": "feat(ai): Support Deepseek as New AI Backend in Karpor",
+            "user": "Cookiery"
+        },
+        {
+            "title": "feat(MCP): mcp SSE init (elasticsearch storage)",
+            "user": "rajp152k"
+        },
+        {
+            "title": "Chore: improve the high availability level in large-scale cluster deployment",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "chore: optimize Makefile with automatic cleanup and cross-platform build",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "feat(search): Add Search Functionality to Resource List in Insights Page",
+            "user": "Cookiery"
+        },
+        {
+            "title": "feat(syncer): add ingress(networking.k8s.io/v1) to watch list",
+            "user": "wujunwei"
+        },
+        {
+            "title": "feat: add llm api proxy parameters",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "docs: add /server-configs",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "fix: the index out of range when es resp is empty",
+            "user": "Cookiery"
+        },
+        {
+            "title": "docs: add Japanese documents",
+            "user": "eltociear"
+        },
+        {
+            "title": "docs: grammar fix",
+            "user": "rajp152k"
+        },
+        {
+            "title": "chore: fix \"go list -m all\" execution",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "docs: add license scan report and status",
+            "user": "fossabot"
+        },
+        {
+            "title": "feat: filter invalid queries for natural language search",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: filter invalid queries for natural language search",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: change the AI command line argument to optional",
+            "user": "jueli12"
+        },
+        {
+            "title": "fix: fix the path of swagger",
+            "user": "regend"
+        },
+        {
+            "title": "feat: automatically update the appVersion in Chart when release new version",
+            "user": "rajeshkio"
+        },
+        {
+            "title": "test: supplementary unit tests for karpor server",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "feat: ignore the k8s automatic injection fields such as managedFields",
+            "user": "regend"
+        },
+        {
+            "title": "Feat: Add --version flag to output current version number #560",
+            "user": "rajeshkio"
+        },
+        {
+            "title": "feat(ui): control whether the Github logo is displayed",
+            "user": "z1cheng"
+        },
+        {
+            "title": "feat: support aws and other OIDC authentication methods kubeconfig (#521)",
+            "user": "CirillaQL"
+        },
+        {
+            "title": "feat: support natural language as a search method",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: support ai backends",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: Automatically calculate the current version number through Git\u2026",
+            "user": "rajeshkio"
+        },
+        {
+            "title": "feat(robustness): add liveness check and readiness check",
+            "user": "JasonHe-WQ"
+        },
+        {
+            "title": "feat: show VersionNumber in dashboard",
+            "user": "solarhell"
+        },
+        {
+            "title": "fix: Add support to manage token based auth",
+            "user": "peter-wangxu"
+        },
+        {
+            "title": "feat(lang): translated UI to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "docs(lang): translated SECURITY.md to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "fix: added missing german translation",
+            "user": "Paradiesvogel7"
+        },
+        {
+            "title": "docs(lang): translated README to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "feat(ui): added german translations",
+            "user": "Paradiesvogel7"
+        }
+    ],
+    "external_contributors_count": 21,
+    "external_contributors": [
+        "CirillaQL",
+        "Cookiery",
+        "JasonHe-WQ",
+        "LeoSofl",
+        "MDA1422",
+        "Paradiesvogel7",
+        "cheny-alf",
+        "eltociear",
+        "fanfan-yu",
+        "fossabot",
+        "jinjiaKarl",
+        "jueli12",
+        "nueavv",
+        "peter-wangxu",
+        "rajeshkio",
+        "rajp152k",
+        "regend",
+        "solarhell",
+        "virtually-stray",
+        "wujunwei",
+        "z1cheng"
+    ],
+    "external_participants_count": 39,
+    "external_participants": [
+        "CirillaQL",
+        "Cookiery",
+        "Edwin-Li-01",
+        "GurdipS5",
+        "Jamel-jun",
+        "JasonHe-WQ",
+        "LeoSofl",
+        "MDA1422",
+        "Paradiesvogel7",
+        "T1-leiyang",
+        "arrowfeng",
+        "chaishiqi",
+        "cheny-alf",
+        "danielstankw",
+        "eltociear",
+        "eryajf",
+        "fabricebrito",
+        "fanfan-yu",
+        "fossabot",
+        "fyqls",
+        "github-actions[bot]",
+        "haiwu",
+        "jinjiaKarl",
+        "jueli12",
+        "kinbod",
+        "kmadel",
+        "kubebn",
+        "nueavv",
+        "peter-wangxu",
+        "rajeshkio",
+        "rajp152k",
+        "regend",
+        "solarhell",
+        "vickydev90",
+        "virtually-stray",
+        "wenxuanwu",
+        "wujunwei",
+        "ywgx",
+        "z1cheng"
+    ],
+    "current_time": "2025-03-31T01:04:31.074762+08:00"
+}
