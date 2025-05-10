@@ -1,0 +1,268 @@
+{
+    "internal_members_count": 13,
+    "internal_members": [
+        "elliotxx",
+        "panshuai-ps",
+        "ffforest",
+        "ruquanzhao",
+        "SparkYuan",
+        "healthjyk",
+        "dependabot[bot]",
+        "wolfcode111",
+        "weieigao",
+        "iamryanchia",
+        "allcontributors[bot]",
+        "panshuai111",
+        "hai-tian"
+    ],
+    "external_issues_count": 0,
+    "external_issues": [],
+    "external_pulls_count": 49,
+    "external_pulls": [
+        {
+            "title": "docs(lang): translated README to Spanish and French",
+            "user": "PurplePlanen"
+        },
+        {
+            "title": "feat: split the syncer into managed cluster in push mode",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "fix: remove invalid lint in pkg",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "WIP: status for cluster and syncregistry",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "feat(i18n): korean language support",
+            "user": "nueavv"
+        },
+        {
+            "title": "feat: support wildcard resource",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "feat(search): integrate MeiliSearch as a new search backend",
+            "user": "wujunwei"
+        },
+        {
+            "title": "docs: remove invalid links",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "Feat karpor agent highversion",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "feat: add high-availability mode for large-scale scene",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "feat: add high-availability mode for large-scale scene",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "feat(yaml): add refresh button & refresh when switch the tab",
+            "user": "LeoSofl"
+        },
+        {
+            "title": "feat(yaml): add refresh button & refresh on tab switch",
+            "user": "LeoSofl"
+        },
+        {
+            "title": "Feat/yaml refresh button",
+            "user": "LeoSofl"
+        },
+        {
+            "title": "refactor(ui): optimize AI-Interpret Card Expansion",
+            "user": "MDA1422"
+        },
+        {
+            "title": "WIP feat:MCP Support init",
+            "user": "rajp152k"
+        },
+        {
+            "title": "feat(ai): Support Deepseek as New AI Backend in Karpor",
+            "user": "Cookiery"
+        },
+        {
+            "title": "feat(MCP): mcp SSE init (elasticsearch storage)",
+            "user": "rajp152k"
+        },
+        {
+            "title": "Chore: improve the high availability level in large-scale cluster deployment",
+            "user": "fanfan-yu"
+        },
+        {
+            "title": "chore: optimize Makefile with automatic cleanup and cross-platform build",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "feat(search): Add Search Functionality to Resource List in Insights Page",
+            "user": "Cookiery"
+        },
+        {
+            "title": "feat(syncer): add ingress(networking.k8s.io/v1) to watch list",
+            "user": "wujunwei"
+        },
+        {
+            "title": "feat: add llm api proxy parameters",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "docs: add /server-configs",
+            "user": "jinjiaKarl"
+        },
+        {
+            "title": "fix: the index out of range when es resp is empty",
+            "user": "Cookiery"
+        },
+        {
+            "title": "docs: grammar fix",
+            "user": "rajp152k"
+        },
+        {
+            "title": "chore: fix \"go list -m all\" execution",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "docs: add license scan report and status",
+            "user": "fossabot"
+        },
+        {
+            "title": "feat: filter invalid queries for natural language search",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: filter invalid queries for natural language search",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: change the AI command line argument to optional",
+            "user": "jueli12"
+        },
+        {
+            "title": "fix: fix the path of swagger",
+            "user": "regend"
+        },
+        {
+            "title": "feat: automatically update the appVersion in Chart when release new version",
+            "user": "rajeshkio"
+        },
+        {
+            "title": "test: supplementary unit tests for karpor server",
+            "user": "cheny-alf"
+        },
+        {
+            "title": "feat: ignore the k8s automatic injection fields such as managedFields",
+            "user": "regend"
+        },
+        {
+            "title": "Feat: Add --version flag to output current version number #560",
+            "user": "rajeshkio"
+        },
+        {
+            "title": "feat(ui): control whether the Github logo is displayed",
+            "user": "z1cheng"
+        },
+        {
+            "title": "feat: support aws and other OIDC authentication methods kubeconfig (#521)",
+            "user": "CirillaQL"
+        },
+        {
+            "title": "feat: support natural language as a search method",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: support ai backends",
+            "user": "jueli12"
+        },
+        {
+            "title": "feat: Automatically calculate the current version number through Git\u2026",
+            "user": "rajeshkio"
+        },
+        {
+            "title": "feat(robustness): add liveness check and readiness check",
+            "user": "JasonHe-WQ"
+        },
+        {
+            "title": "feat: show VersionNumber in dashboard",
+            "user": "solarhell"
+        },
+        {
+            "title": "fix: Add support to manage token based auth",
+            "user": "peter-wangxu"
+        },
+        {
+            "title": "feat(lang): translated UI to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "docs(lang): translated SECURITY.md to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "fix: added missing german translation",
+            "user": "Paradiesvogel7"
+        },
+        {
+            "title": "docs(lang): translated README to Portuguese",
+            "user": "virtually-stray"
+        },
+        {
+            "title": "feat(ui): added german translations",
+            "user": "Paradiesvogel7"
+        }
+    ],
+    "external_contributors_count": 21,
+    "external_contributors": [
+        "CirillaQL",
+        "Cookiery",
+        "JasonHe-WQ",
+        "LeoSofl",
+        "MDA1422",
+        "Paradiesvogel7",
+        "PurplePlanen",
+        "cheny-alf",
+        "fanfan-yu",
+        "fossabot",
+        "jinjiaKarl",
+        "jueli12",
+        "nueavv",
+        "peter-wangxu",
+        "rajeshkio",
+        "rajp152k",
+        "regend",
+        "solarhell",
+        "virtually-stray",
+        "wujunwei",
+        "z1cheng"
+    ],
+    "external_participants_count": 21,
+    "external_participants": [
+        "CirillaQL",
+        "Cookiery",
+        "JasonHe-WQ",
+        "LeoSofl",
+        "MDA1422",
+        "Paradiesvogel7",
+        "PurplePlanen",
+        "cheny-alf",
+        "fanfan-yu",
+        "fossabot",
+        "jinjiaKarl",
+        "jueli12",
+        "nueavv",
+        "peter-wangxu",
+        "rajeshkio",
+        "rajp152k",
+        "regend",
+        "solarhell",
+        "virtually-stray",
+        "wujunwei",
+        "z1cheng"
+    ],
+    "current_time": "2025-05-11T01:04:06.360186+08:00"
+}
